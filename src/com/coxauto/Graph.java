@@ -135,5 +135,31 @@ public class Graph {
         return null;
     }
 
+
+    public int lengthOfShortestRoute(String originName, String destinationName) {
+
+        int routeLength = 0;
+
+        for(Node node : nodes) {
+
+//            for (Node nodeLeg : node.getShortestPath()) {
+//                System.out.print(nodeLeg.getName());
+//                System.out.print(" -> ");
+//            }
+
+//            System.out.print(node.getName());
+
+            if (node.getName().equals(destinationName)) {
+                routeLength = node.getDistance();
+                break;
+            }
+        }
+
+//        System.out.print("    length of shortest route: " + routeLength);
+//        System.out.println("--------------------------------");
+//        System.out.println("");
+
+        return routeLength;
+    }
 }
 
